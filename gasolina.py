@@ -3,4 +3,8 @@ import seaborn as sns
 
 data = pd.read_csv('gasolina.csv')
 
-grafico = sns.barplot(data=data,x='dia',y='venda', palette='pastel')
+with sns.axes_style('whitegrid'):
+
+  grafico = sns.lineplot(data= data , x='venda', y='dia')
+  grafico.set(title='Preço da gosolina por dia')
+  
